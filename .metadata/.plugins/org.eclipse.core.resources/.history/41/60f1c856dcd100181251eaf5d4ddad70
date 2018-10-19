@@ -1,0 +1,16 @@
+package Table_group.table_g;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class MyTable {
+	 public static WebDriver driver;
+	String path="file:///home/cws/Desktop/table.html";
+	public static void main(String[] args) {
+		System.setProperty("webdriver.firefox.driver","Exefile/geckodriver");
+		driver= new FirefoxDriver();
+		 driver.get(");
+		
+	}
+
+}

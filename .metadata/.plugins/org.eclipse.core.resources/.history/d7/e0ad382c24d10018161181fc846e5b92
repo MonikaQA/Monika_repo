@@ -1,0 +1,39 @@
+package Table_group.table_g;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverPropertyInfo;
+import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.text.ParseException;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
+import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TableOne {
+	  public static  WebDriver driver;
+	  public static String key=".Exefile/chromedriver";
+	  
+	  public static void main(String[] args) {
+		  System.setProperty("webdriver.chrome.driver", key);
+		  driver= new ChromeDriver();
+		  driver.manage().window().maximize();
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("https://money.rediff.com/gainers/bsc/daily/groupa");
+	  WebElement tableEle=driver.findElement(By.xpath("https://money.rediff.com/gainers/bsc/daily/groupa"));
+	  
+	  }
+	  
+		
+			
+		
+		
+				  
+	}
+

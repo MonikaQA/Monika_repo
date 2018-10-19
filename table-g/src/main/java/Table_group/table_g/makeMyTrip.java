@@ -1,0 +1,25 @@
+package Table_group.table_g;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.SendKeysAction;
+
+public class makeMyTrip {
+public static WebDriver driver;
+public static String path="https://www.easemytrip.com/flight-schedule/delhi-mumbai.html";
+public static void main(String[] args) {
+	System.setProperty("webdriver.gecko.driver","Exefile/geckodriver");
+	driver= new FirefoxDriver();
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
+	// finding Xpath for Enter departure place
+driver.findElement(By.xpath(".//input[@placeholder='rom'and @id='FromSector']")).sendKeys("del");
+
+//drivern[@id='spn12'
+}
+//".//div[@class="month3"]/img[2][@id='img2Nex']"; 
+ 
+}

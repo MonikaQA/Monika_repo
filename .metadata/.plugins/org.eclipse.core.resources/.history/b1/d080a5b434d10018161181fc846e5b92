@@ -1,0 +1,39 @@
+package Table_group.table_g;
+import java.awt.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TableOne {
+	  public static  WebDriver driver;
+	  public static String key="Exefile/geckodriver";
+	  
+	  public static void main(String[] args) {
+		  System.setProperty("webdriver.gecko.driver", key);
+		  driver= new FirefoxDriver();
+		 driver.manage().window().maximize();
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
+		  driver.get("https://money.rediff.com/gainers/bsc/daily/groupa");
+	  WebElement tableRow=driver.findElement(By.xpath(".//table[@class='dataTable']//tr[3]"));
+	  String rowtext=tableRow.getText();
+	  System.out.println("third row of text: "+rowtext);
+	  
+	  //get no of rows in column
+	  java.util.List<WebElement> col= driver.findElements(By.xpath(".//thead/tr//th"));
+	  System.out.println("No of cols are :" +col.size());
+	  java.util.List<WebElement> Row=  driver.findElements(By.xpath(".//table/tbody"));
+	  System.out.println("row sizr" +Row);
+	  
+	  }
+	  
+		
+			
+		
+		
+				  
+	}
+

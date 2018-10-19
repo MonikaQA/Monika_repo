@@ -1,0 +1,31 @@
+package Table_group.table_g;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TableOne {
+	  public static  WebDriver driver;
+	  public static String key="Exefile/geckodriver";
+	  
+	  public static void main(String[] args) {
+		  System.setProperty("webdriver.gecko.driver", key);
+		  driver= new ChromeDriver();
+		 // driver.manage().window().maximize();
+		 // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://locuments.cwsdev4.biz/login");
+		  //driver.get("https://money.rediff.com/gainers/bsc/daily/groupa");
+	  WebElement tableRow=driver.findElement(By.xpath(".//table[@class='dataTable']//tr[3]"));
+	  String rowtext=tableRow.getText();
+	  System.out.println("third row of text: "+rowtext);
+	  
+	  }
+	  
+		
+			
+		
+		
+				  
+	}
+

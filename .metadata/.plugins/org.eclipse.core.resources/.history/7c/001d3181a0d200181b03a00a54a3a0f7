@@ -1,0 +1,36 @@
+package Table_group.table_g;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class MyTable {
+	 public static WebDriver driver;
+	static String path="file:///home/cws/Desktop/table.html";
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","Exefile/geckodriver");
+		driver= new FirefoxDriver();
+		 driver.get(path);
+		 WebElement mytable=driver.findElement(By.tagName("table"));
+		 List<WebElement>  My_row=driver.findElements(By.tagName("tr"));
+		 int row_count= My_row.size();
+		 System.out.println("This is Row count" +row_count);
+		 for(int r_count=0; r_count<row_count; r_count++){
+	
+			 List<WebElement> col= My_row.get(r_count).findElements(By.tagName("td"));driver.findElements(By.tagName("td"));
+			 
+		 int cell_count=col.size();
+	 System.out.println("Table  total Cells: "+cell_count);
+	 for (int c_count = 0; c_count <cell_count; c_count++) {
+			 String cellText= col.get(c_count).getText();
+			 System.out.println("row  NumberIs: " +r_count+" column is: "+c_count+"value"+cellText);
+				 	}
+ System.out.println("*********************************");
+ }
+		 driver.close();
+	}
+
+}
